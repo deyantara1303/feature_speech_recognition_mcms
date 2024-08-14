@@ -1,0 +1,8 @@
+SpeechRecognition[whisper-local]
+vosk
+pydub
+transformers
+pyaudio
+requests
+psutil
+ffmpeg
