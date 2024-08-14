@@ -29,7 +29,7 @@ Here is a step-by-step explanation:
 * The user starts the main program, initiating the speech recognition system.
 * The main program initializes the logger and sets up network configurations. It creates a SpeechController instance and a command queue.
 * The main program starts two threads: recognize_speech_thread() and process_command_thread().
-    recognize_speech_thread() records audio input from the microphone using PyAudio. The microphone listens iteratively a certain time assigned to the RECORD_SECONDS variable. It identifies commands (e.g., "long," "short," or "stop") from the transcribed text [18].
+    recognize_speech_thread() records audio input from the microphone using PyAudio. The microphone listens iteratively a certain time assigned to the RECORD_SECONDS variable. It identifies commands (e.g., "long," "short," or "stop") from the transcribed text.
     process_command_thread() retrieves commands from the command queue and invokes methods on the SpeechController to send HTTP requests to the REST API.
 * The Vosk Kaldi recognizer transcribes the recorded audio into text.
 * The REST API executes the appropriate massage sequence based on the command and updates the state: mode_long, mode_short, or stop.
